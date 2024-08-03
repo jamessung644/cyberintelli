@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>AI Developer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#awards">Awards</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="your-photo.jpg" alt="Your Name">
+            <p>Write a brief introduction about yourself here.</p>
+        </section>
+
+        <section id="projects">
+            <h2 class="animate-on-scroll">Projects</h2>
+            <div class="project animate-on-scroll">
+                <h3>Project Name</h3>
+                <img src="project-image.jpg" alt="Project Name">
+                <p>A brief description of the project and its impact.</p>
+                <a href="#" class="cta-button">Learn more</a>
+            </div>
+            <!-- Repeat for other projects -->
+        </section>
+
+        <section id="awards">
+            <h2>Awards</h2>
+            <!-- Add your awards here -->
+            <ul>
+                <li>Award 1</li>
+                <li>Award 2</li>
+                <!-- Add more awards as needed -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+      function checkScroll() {
+        animatedElements.forEach(function(element) {
+          var position = element.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+    
+          if (position < windowHeight * 0.9) {
+            element.classList.add('is-visible');
+          }
+        });
+      }
+    
+      window.addEventListener('scroll', checkScroll);
+      checkScroll(); // Check on load
+    });
+    </script>
+</html>
